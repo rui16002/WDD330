@@ -4,11 +4,6 @@ import {createRow} from './utilities.js';
 import {readFromLS} from './ls.js';
 import {writeToLS} from './ls.js';
 
-//Contants defined for filterin type.
-const C_COMPLETED = 0;
-const C_ACTIVE = 1;
-const C_ALL = 1;
-
 //Our todo list
 export let todoList = [];
 
