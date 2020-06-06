@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WD330 Portfolio - Week07</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<header>
+  <h1>WD330 Portfolio</h1>
+  <h2>Web Frontend Development II</h2>
+  <h3>Week 07</h3>
+</header>
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+</div>
+
+<section>
+  <article>
+    <div class="report">
+    <h1>Week 07 report</h1>
+    <h2>What did I do since the last meeting?</h2>
+     <p>I was able to read the assigned chapters (11 and 13).</p>
+     <p>I was able to complete the todo project</p>
+     <p>I was able to complete the team's assignment</p>
+    <h2>What am I going to do next?</h2>
+     <p>I will complete the reading between today and tomorrow and jump to the team assignment.</p>
+    <h2>What are my blockers?</h2>
+     <p>None</p>
+  </div>
+  <div class="findings">
+    <h1>Findings</h1>
+
+    <h2>Function properties and methods</h2>
+    <p>Functions have properties like "lenght" that indicates the number of parameters</p>
+
+    <h2>Call and apply</h2>
+    <p>The call() method can be used to set the "this" variable inside a function.</p>
+    <p>The apply function works the same way, but parameters are added as arrays.</p>
+
+    <h2>Custom properties</h2>
+    <p>It is interesting how we can add custom properties to functions such as function description</p>
+
+    <h2>Immediately invoked functions</h2>
+    <p>I am a little familiar with this, I have seen it applied mostly when dealing with callbacks. We have to be carefull though not to use it excesively as code can easily turn into spaguetti code.</p>
+    <p>It could be used with temporary variables and initialization functions. Althought in ES6 this could be replaced by code blocks.</p>
+    <p>It could also be used to safely use strict mode (on our own code). To write functions that rewrite themselves(This is a powerful feature). We have to be careful with defined properties as they need to be redefined as well, otherwise, they will result in undefined.</p>
+    <p>Init-time branching, this is also very powerful as we can define a function given a certain environment and use it without the need to check the environment everytime</p>
+    <p>It could also be used for recursive functions</p>
+    
+    <h2>Error first callback pattern</h2>
+    <p>this is the pattern used in nodeJS</p>
+    
+    <h2>Promise</h2>
+    <p>promises solve the same problems callbacks do in a more readable ordered way. Promises are created with a constructor that takes an executor function with two function parameters, resolve and reject. Once a promise has been settled, we can deal with the outcome using then(fulfilmentFunction, rejectionFunction) or then(fulfilmentFunction).catch(rejectionFunction). Promises can be chained together to improve readability.</p>
+    <p>This behavior can also be achieved with async and await, these two reserved words help to write asynchronous code as if it was syncronous.</p>
+
+    <h2>Functions can return functions</h2>
+    <h2>Generators</h2>
+    <p>Generators are functions that creates iterators, they use an asterix after function and yield instead of return. They use the next() function to get the next value produced by the yield command</p>
+
+    <h2>Multiparadigm programming</h2>
+    <p>JS can be used with various programming paradigms, functional programming, procedural programming and OOP. Even a combination of them.</p>
+
+    <h2>Pure functions</h2>
+    <p>functions that return a calculation based on the parameters passed without altering them.</p>
+
+    <h2>High order functions</h2>
+    <p>High order functions are functions that receive or return other functions</p>
+
+    <h2>Currying</h2>
+    <p>Partial application of a function given the parameters passed</p>
+
+    <h2>AJAX</h2>
+    <p>Ajax is a technic to send and receive data to/from the server asynchronously, ussually as a JSON file. This is usefull to do partial page updates. Ajax requests can be made using the Fetch API. There are several interfaces that allows us to control requests and responses (Headers, Response, Request).</p>
+    <p>The FormData interface makes it easier to send data from forms.</p>
+   </div>
+  </article>
+</section>
+
+<footer>
+  <p>Josué Ruiz</p>
+</footer>
+
+</body>
+</html>
