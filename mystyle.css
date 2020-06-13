@@ -20,12 +20,17 @@ section {
   background-color: silver;
 }
 
+article {
+  width: 100%;
+}
+
 .report {
     border-width: thin;
     border-style: solid;
     padding: 10px;
     margin: 10px 2px 10px;
     background: lavender;
+    width: inherit;
 }
 
 .findings {
@@ -34,6 +39,12 @@ section {
     padding: 10px;
     margin: 10px 2px 10px;
     background: antiquewhite;
+    width: inherit;
+}
+
+svg {
+  width: 50px;
+  border: 2px dotted black;
 }
 
 /* Style applied to the top nav in each of the week's pages*/

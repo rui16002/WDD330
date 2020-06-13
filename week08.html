@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WD330 Portfolio - Week08</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<header>
+  <h1>WD330 Portfolio</h1>
+  <h2>Web Frontend Development II</h2>
+  <h3>Week 08</h3>
+</header>
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+</div>
+
+<section>
+  <article>
+    <div class="report">
+    <h1>Week 08 report</h1>
+    <h2>What did I do since the last meeting?</h2>
+     <p>I was able to read the assigned chapters (8 and 12) from HTML5 & CSS3 for the Real World: 2nd Edition.</p>
+     <p>I was able to complete the team's assignment with the team</p>
+    <h2>What am I going to do next?</h2>
+     <p>I will complete the reading between today and tomorrow and jump to the team assignment.</p>
+    <h2>What are my blockers?</h2>
+     <p>None</p>
+  </div>
+  <div class="findings">
+    <h1>Findings</h1>
+
+    <h2>Transformations</h2>
+    <p>The translate(x,y) function moves an element x from the left, and y from the top. EG: transform: translate(45px, -45px);</p>
+    <p>The scale(x,y) function scales an element by the defined factors horizontally then vertically. EG: transform: scale(1.5, 0.25);</p>
+    <p>The rotate() function rotates an element around the point of origin by a specified angle value</p>
+    <p>The skew(x,y) function specifies a skew along the x and y axes. EG: transform: skew(15deg, 4deg)</p>
+    <p>The transform-origin property moves the rotation point of the object to the one specified.</p>
+    <p>The order of transforms DOES matter</p>
+
+    <h2>Transitions</h2>
+    <p>The transition-property property defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</p>
+    <p>The transition-duration property sets how long the transition will take. EG: transition-duration: 0.2s;</p>
+    <p>The transition-timing-function lets you control the pace of the transition in even more granular detail.The most common timing functions include the key terms ease , linear , ease-in , ease-out , or ease-in-out</p>
+    <p>The transition-delay property allows to introduce a delay before the transition begins. EG: transition-delay: 50ms;</p>
+    <p>The transition property let us group all four in just one line like so: transition: transform 0.2s ease-out 50ms;</p>
+    <p>we can also group transitions like so: transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;</p>
+
+    <h2>Keyframes - animations</h2>
+    <p>To animate an element in CSS, you first create a named animation, then attach it to an element in that element’s property declaration block. EG: @keyframes appearDisappear { 0%, 100% {opacity: 0;} 20%, 80% {opacity: 1;}}</p>
+    <p>As with transitions, some properties need to be added: animation-name, animation-duration, animation-timing-function</p>
+    <p>he animation-iteration-count property lets you define how many times the animation will play through: EG: animation-iteration-count: infinite;</p>
+    <p>On multiple iterations animations I would want to pay attention to the animation-direction property. Instead of jumping abruptly to the beginning I can start the second iteration from 100% to 0%</p>
+    <p>The animation-play-state property defines whether the animation is running or paused</p>
+    <p>The animation property is a shorthand for all the properties mentioned above like so: animation: 300ms ease-in infinite alternate 5s backwards appearDisappear running;</p>
+
+    <h2>Canvas</h2>
+    <p>first we need to define a canvas element with id, width and height (these last 2 should not be defined usign css). We then find the element with JS and get the context like so: var canvas =  document.getElementById("myCanvas");
+    var context = canvas.getContext("2d");</p>
+    <p>We can draw a blue rectangle with red stroke like so: context.strokeStyle = "red";
+    context.fillStyle = "rgba(0, 0, 255, 0.5)";
+    context.fillRect(10, 10, 100, 100);   
+    context.strokeRect(10, 10, 100, 100); </p>
+    <p>Notice that the canvas coordinate system goes top-to-bottom and left-to-right</p>
+    <p>We can use images in canvas like so: function drawPattern() {
+    …
+    var img = new Image();
+    img.src = "../images/bg-bike.png";
+    img.onload = function() {
+    var pattern = context.createPattern(img, "repeat"); 
+    context.fillStyle = pattern;                        
+    context.fillRect(10, 10, 100, 100);                  
+    context.strokeRect(10, 10, 100, 100);             
+    };
+    }</p>
+    <p>We can create linear gradient effects like: context.createLinearGradient(0, 0, 0, 200);
+    gradient.addColorStop(0, "blue"); 
+    gradient.addColorStop(1, "white"); </p>
+    <p>we can add a circle to canvas by using the arc function: arc(x, y, radius, startAngle, endAngle, anticlockwise)</p>
+    <p>    context.beginPath();
+    context.arc(100, 100, 50, 0, Math.PI*2, true);
+    context.closePath(); </p>
+    <p>Note that it is not visible till we add a stroke and fill to our new shape.</p>
+    <p>we can add text, video or other shapes to canvas</p>
+
+    <h2>SVG</h2>
+    <p>We can draw a circle in svg like so: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+    <circle cx="5" cy="5" r="5" fill="red"/>
+    </svg></p>
+    <p>rectangles like so: <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 25 25">
+    <desc>Drawing a rectangle</desc>
+        <rect x="1" y="1" width="20" height="10"  
+            fill="blue" stroke="red" stroke-width="1"  />  
+    
+</svg></p>
+<p>It is better to create complex svg images in an image editor like inkscape</p>
+
+<h2>Drag and drop</h2>
+<p>We can use the drag and drop API to allow certain elements to be dragged and dropped. We need to define an attribute (draggable="true") to the elements (The rest of the elements don't need to have this property set to false, since draggable is not boolean)</p>
+<p>we need to define an event listener to deal with the dragging: addEventListener('dragstart', function (event) {
+ event.dataTransfer.setData("text/plain", this.id); 
+    });</p>
+    <p>To set a container to deal with the dragover we do it like so: var cat = document.getElementById("cat");
+cat.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});</p>
+<p>We also need to define a event listener to deal with the drop event cat.addEventListener("drop", function(event) {Code here}</p>
+   </div>
+  </article>
+</section>
+
+<footer>
+  <p>Josué Ruiz</p>
+</footer>
+
+</body>
+</html>
