@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WD330 Portfolio - Week09</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<header>
+  <h1>WD330 Portfolio</h1>
+  <h2>Web Frontend Development II</h2>
+  <h3>Week 09</h3>
+</header>
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+</div>
+
+<section>
+  <article>
+    <div class="report">
+    <h1>Week 09 report</h1>
+    <h2>What did I do since the last meeting?</h2>
+     <p>I was able to read the assigned chapters (9 and 14) from JavaScript novice to ninja.</p>
+     <p>I was able to complete the team's assignment with the team</p>
+    <h2>What am I going to do next?</h2>
+     <p>I will complete the reading between today and tomorrow and jump to the team assignment.</p>
+    <h2>What are my blockers?</h2>
+     <p>None</p>
+  </div>
+  <div class="findings">
+    <h1>Findings</h1>
+    <h2>Global</h2>
+    <p>There is a global object declared in every context, in the browser context, the object is called window object.</p>
+    <p>We ca use alerts and prompts but these should be used with care since they stop the execution of the program.</p>
+    <p>We can use it to get information regarding the navigator, such as the user agent.</p>
+    <p>The search property could be used to parse parameters being sent through the url.</p>
+    <p>using the history property I can reload the current page, go back of forward in the history</p>
+    <p>I can control the windows size, position, etc. I can close the window or open other windows</p>
+    <p>The Screen object has more uses for mobile devices. It also allows you to do things like turn off the device’s screen, detect a change in its orientation or lock it in a specific orientation.</p>
+    <h2>Cookies</h2>
+    <p>Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users. The use of cookies for tracking purposes has been much maligned in recent years. Their use for data storage is starting to be replaced in many cases by the new HTML5 localStorage API as it allows more data to be stored. </p>
+    <p>we should not rely on the cookie expires value</p>
+    <h2>timing functions</h2>
+    <p>setTimeout will call a function after certaint time</p>
+    <p>setInterval is similar but it will keep calling the callback function.</p>
+    <p>These two methods could be used to perform animations although the requestAnimationFrame should be used instead for better performance. CancelAnimation frame is used to stop the animation. CSS should be used intead of these functions whenever posible.</p>
+
+    <h2>HTML5</h2>
+    <p>The data- atribute could be used to set attributes to elements. values could be access like: element.dataset.attribute</p>
+    <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card</p>
+    <p>localStorage works in a similar way as cookies, but there is virtualy no storage limit. sessionStorage works in a similar fashion but data expires with the session.</p>
+    <h3>Geolocation</h3>
+    <p>We can get the device's location like: navigator.geolocation.getCurrentPosition(youAreHere);. youAreHere is a callback aparameter is passed to this callback this parameter has a coords property with a latitude and longitud. there are several other properties like, position.altitude, speed, heading, timestamp</p>
+    <h3>Web workers</h3>
+    <p>web workers can be used to "simulate" avoid script unresponsive alerts. We can run scripts in the background.</p>
+    <p>Websocket is a new protocol that allows two-way communication with a server – also known as push messaging.</p>
+    <p>we can send notifications to the user by asking for permissions like: Notification.requestPermission()</p>
+    <p>HTML5 introduced the use of audio and video tags to be able to display or play audio and video, we have seen this in action during the team assignment. We can play, pause, change volume and jump forward, adjust the playback rate, loop the video, see the video duration, etc.</p>
+   </div>
+  </article>
+</section>
+
+<footer>
+  <p>Josué Ruiz</p>
+</footer>
+
+</body>
+</html>
