@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>WD330 Portfolio - Week10</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<body>
+
+<header>
+  <h1>WD330 Portfolio</h1>
+  <h2>Web Frontend Development II</h2>
+  <h3>Week 10</h3>
+</header>
+
+<div class="topnav">
+  <a class="active" href="index.html">Home</a>
+</div>
+
+<section>
+  <article>
+    <div class="report">
+    <h1>Week 10 report</h1>
+    <h2>What did I do since the last meeting?</h2>
+     <p>I was able to read the assigned material: "Client-side form validation" and "Using Fetch" from MDN Web Docs</p>
+     <p>I was able to complete the team's assignment with the team</p>
+    <h2>What am I going to do next?</h2>
+     <p>I will complete the reading between today and tomorrow and jump to the team assignment.</p>
+    <h2>What are my blockers?</h2>
+     <p>None</p>
+  </div>
+  <div class="findings">
+    <h1>Findings</h1>
+    <h2>Clent-side form validation</h2>
+    <p>It is important to validate form validation before sending the data to the server. The user can fix it straight away and it saves the round trip to the server and back.</p>
+    <p>Validations must happen on both sides, specially those related with security since client-side validations are easy to bypass</p>
+    <p>There are 3 main reasons for for validation</p>
+    <ul>
+      <li>We want to get the right data, in the right format. Our applications won't work properly if our users' data is stored in the wrong format, is incorrect, or is omitted altogether.</li>
+      <li>We want to protect our users' data. Forcing our users to enter secure passwords makes it easier to protect their account information.</li>
+      <li>We want to protect ourselves. There are many ways that malicious users can misuse unprotected forms to damage the application</li>
+    </ul>
+    <p>We can use either HTML5 built-in validation or JS. Some of the available built-in validations are: "required", "min-lenght" or "max-lenght" (for text), "min" or "max" (for numbers), "type"(email, number, etc), pattern (regular expression). The validation generates a pseudo-class, we can apply style like so input:invalid {}</p>
+    <p>As of JS validation, we can use the Constraint validation API. The following properties are available: validationMessage, ValidityState(PatternMismatch, tooLong, tooShort, rangeOverflow, rangeUnderflow, typeMismatch, valid, valueMissing), willValidate, checkValidity(), setCustomValidity(msg)</p>
+    <p>As a summary of this reading should allways display explicit error messages, be permissive about the input format and point out exactly where the error occurs, especially on large forms.</p>
+    <h2>Using fetch</h2>
+    <p>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses.</p>
+    <p>We have seen the use of fetch in our previous assignments</p>
+    <p>we can send json files, other files and even multiple files. We can also create our own request object</p>
+    <p>The headers interfase allows us our own headers and we can query it like so: myHeaders.has('Content-Type') </p>
+    <p>The most common response properties are, Response.status, Response.statusText and Response.ok</p>
+  </div>
+  </article>
+</section>
+
+<footer>
+  <p>Josué Ruiz</p>
+</footer>
+
+</body>
+</html>
