@@ -14,6 +14,10 @@ controlDraggables(){
   
   Draggable.create(".draggable", {
     bounds:"svg",
+    edgeResistance: 0.65,
+    type: "x,y",
+    inertia: true,
+    autoScroll: true,
     onDrag: function() {
 	  var i = staticList.length;
 	  while (--i > -1) {
