@@ -11,8 +11,10 @@ controlDraggables(){
   
   var draggableList = document.getElementsByClassName("draggable");
   var staticList = document.getElementsByClassName("static");
+
+  Draggable.create(".draggable", {type:"x,y", edgeResistance:0.65, bounds:"#container", inertia:true});
   
-  Draggable.create(".draggable", {
+/*  Draggable.create(".draggable", {
     bounds:"svg",
     onDrag: function() {
 	  var i = staticList.length;
@@ -30,7 +32,7 @@ controlDraggables(){
         	  currDrop.classList.remove("svgHover");
     }
   },
-      onDragEnd:function(e) {
+    onDragEnd:function(e) {
 	  var i = staticList.length;
 	  while (--i > -1) {
 		  //If it overlaps by 50% at least, trigger
@@ -48,5 +50,5 @@ controlDraggables(){
     }
   }
   });
-  }
+  }*/
 }
