@@ -4,24 +4,23 @@ export default class ShapeMatchingModel {
   }
 
 controlDraggables(){
-
   var draggableList = document.getElementsByClassName("draggable");
   var staticList = document.getElementsByClassName("static");
 
-    Draggable.create(".draggable", {
-    bounds: "svg",
+  var container = document.querySelector('svg');
+
+//the update() function is what creates the Draggable according to the options selected (snapping).
+  Draggable.create(".draggable", {
+    bounds: container,
     edgeResistance: 0.65,
-    type: "x,y",
     inertia: true,
     autoScroll: true,
   });
-  
- /* Draggable.create(".draggable", {
+
+
+/*  Draggable.create(".draggable", {
     bounds:"svg",
-    edgeResistance: 0.65,
-    type: "x,y",
     inertia: true,
-    autoScroll: true,
     onDrag: function() {
 	  var i = staticList.length;
 	  while (--i > -1) {
