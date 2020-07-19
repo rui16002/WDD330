@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Toddler Game Collection</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<div class="container" id="appContainer">
+	<div class="container" id="menuContainer">
+		<div class="menuItem container" id="bubblePoppingButton">
+		   <img src="./MenuAssets/bubblePopping.png">
+		</div>
+		<div class="menuItem container" id="animalSoundBoardButton">
+		   <img src="./MenuAssets/animalSoundBoard.jpg">
+		</div>
+		<div class="menuItem container" id="shapeMatchingButton">
+		   <img src="./MenuAssets/ShapeMatching.jpg">
+		</div>
+	</div>
+	<!--Game Area - Here we have all the content of the three minigames///////////-->
+	<div id="bubblePoppingContainer"></div>
+	<div id="soundBoardContainer" class="hidden"></div>
+	<div id="shapeMatchingContainer" class="hidden"></div>
+	</div>
+    <script src="index.js" type="module"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/utils/Draggable.min.js"></script>
+</body>
+</html>

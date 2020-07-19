@@ -1,0 +1,74 @@
+{
+	"lion":{
+	  "id": "1",
+	  "description": "Lion",
+	  "imgSource": "Lion.png",
+	  "audioSource": "Lion.mp3"
+	},
+	"cat":{
+	  "id": "3",
+	  "description": "Cat",
+	  "imgSource": "Cat.jpg",
+	  "audioSource": "Cat.mp3"
+	},
+	"cow":{
+	  "id": "4",
+	  "description": "Cow",
+	  "imgSource": "Cow.jpg",
+	  "audioSource": "Cow.mp3"
+	},
+	"dog":{
+	  "id": "5",
+	  "description": "Dog",
+	  "imgSource": "Dog.jpg",
+	  "audioSource": "Dog.mp3"
+	},
+	"donkey":{
+	  "id": "6",
+	  "description": "Donkey",
+	  "imgSource": "Donkey.jpg",
+	  "audioSource": "Donkey.mp3"
+	},
+	"Elephant":{
+	  "id": "7",
+	  "description": "Elephant",
+	  "imgSource": "Elephant.jpg",
+	  "audioSource": "Elephant.mp3"
+	},
+	"Goat":{
+	  "id": "8",
+	  "description": "Goat",
+	  "imgSource": "Goat.jpg",
+	  "audioSource": "Goat.mp3"
+	},
+	"Horse":{
+	  "id": "9",
+	  "description": "Horse",
+	  "imgSource": "Horse.jpg",
+	  "audioSource": "Horse.mp3"
+	},
+	"Rooster":{
+	  "id": "10",
+	  "description": "Rooster",
+	  "imgSource": "Rooster.jpg",
+	  "audioSource": "Rooster.mp3"
+	},
+	"Seagull":{
+	  "id": "11",
+	  "description": "Seagull",
+	  "imgSource": "Seagull.jpeg",
+	  "audioSource": "Seagull.mp3"
+	},
+	"Seal":{
+	  "id": "12",
+	  "description": "Seal",
+	  "imgSource": "Seal.jpeg",
+	  "audioSource": "Seal.mp3"
+	},
+	"Sheep":{
+	  "id": "13",
+	  "description": "Sheep",
+	  "imgSource": "Sheep.jpeg",
+	  "audioSource": "Sheep.mp3"
+	}
+}
