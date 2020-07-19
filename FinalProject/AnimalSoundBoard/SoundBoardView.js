@@ -1,6 +1,6 @@
 export default // soundBoard View handler
 
-class soundBoardView {
+class SoundBoardView {
   constructor (soundList, container)
   {
     this.soundList = soundList;
