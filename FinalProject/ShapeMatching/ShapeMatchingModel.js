@@ -5,14 +5,18 @@ export default class ShapeMatchingModel {
 
 controlDraggables(){
 
-  function onDrop(dropped) {
-    gsap.fromTo(dropped, {opacity:1}, {duration: 0.1, opacity:0, repeat:3, yoyo:true});
-  }
-  
   var draggableList = document.getElementsByClassName("draggable");
   var staticList = document.getElementsByClassName("static");
+
+    Draggable.create(".draggable", {
+    bounds: "svg",
+    edgeResistance: 0.65,
+    type: "x,y",
+    inertia: true,
+    autoScroll: true,
+  });
   
-  Draggable.create(".draggable", {
+ /* Draggable.create(".draggable", {
     bounds:"svg",
     edgeResistance: 0.65,
     type: "x,y",
@@ -52,5 +56,5 @@ controlDraggables(){
     }
   }
   });
-  }
+  }*/
 }
