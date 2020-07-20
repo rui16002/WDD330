@@ -11,3 +11,7 @@ export function getJSON(url) {
       console.log(error);
     });
 }
+
+export function generateRandom(min, max){
+  return (Math.floor(Math.random() * (max - min)) + min);
+}

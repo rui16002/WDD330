@@ -1,9 +1,10 @@
+import { generateRandom } from "./../utilities.js";
 // BubbleModel Model
 export default class BubbleModel {
-  constructor(size = 10) {
+  constructor(container, size = 10) {
     this.bubbles = new Array();
+    this.container = container;
     this.size = size;
-    this.bubblesLeft = size;
     for (var i = 0; i < this.size; i++) {
     	this.blow(i);
     }
@@ -12,21 +13,12 @@ export default class BubbleModel {
   getBubbleList() {
     return this.bubbles;
   }
-
-  pop(bubbleId){
-  	this.bubbles[bubbleId].popped = true;
-  	this.bubblesLeft--;
-  }
-
   blow(bubbleId){
-  	const marginLeft = Math.floor(window.innerWidth * 0.2);
-  	const marginRight = window.innerWidth - 150;
+    const bubbleSize = window.innerWidth * 0.1;
+  	const marginLeft = window.innerWidth - this.container.clientWidth;
+  	const marginRight = window.innerWidth - bubbleSize;
   	const left = generateRandom(marginLeft, marginRight);
   	const blowSpeed = generateRandom(1,5);
-	this.bubbles.push({pos:{x:left, y:generateRandom(-50,-300)}, popped:false, interval:null, speed: blowSpeed});
+	this.bubbles.push({pos:{x:left, y:generateRandom(0,10)}, interval:null, speed: blowSpeed});
   }
-}
-
-function generateRandom(min, max){
-  return (Math.floor(Math.random() * (max - min)) + min);
 }

@@ -5,7 +5,6 @@ class BubblesView {
   {
     this.container = container;
     this.bubbles = bubbles;
-    this.poppedBubbles = [];
   }
 
   renderBubbleList() {
@@ -20,29 +19,29 @@ class BubblesView {
     sound.innerHTML = 'Audio element not supported';
     container.appendChild(sound);
     for (var i = 0; i < this.bubbles.length; i++) {
-      const item = newBubble(i, this.bubbles[i]);
+      const item = newBubble(i, this.bubbles[i], container);
       container.appendChild(item);
 }
 }
 
 animate(){
+    const container = this.container;
     this.bubbles.forEach((currBubble, index) => {
-      const bubble = document.querySelector("#bubble"+index);
-      //If the buble has not been popped
-      if (bubble.style.display != "none"){
-      currBubble.interval = setInterval(frame, 25);
-   
+      currBubble.interval = setInterval(frame, 25);   
       function frame(){
-        const bubble = document.querySelector("#bubble"+ index);
+        const bubble = document.querySelector("#bubble"+index);
+        //If the buble has been popped
+        if(bubble.style.display == "none"){
+          clearInterval(currBubble.interval);
+        }
+        else { //Move the bubble
         const posy = parseFloat(bubble.style.bottom);
-        if (posy < 700)
+        if (posy < window.innerHeight)
           bubble.style.bottom = Math.floor(posy + currBubble.speed) + "px";
         else
-          bubble.style.bottom = "-100px";//Move them back to the bottom
+          bubble.style.bottom = 0;//Move them back to the bottom
     }
   }
-  else if(bubble.style.display == "none")
-    clearInterval(currBubble.interval);
 });
 }
 
@@ -51,7 +50,7 @@ animate(){
 
 const baseURL = "./BubblePopping/Assets/";
 
-function newBubble(id, bubble){
+function newBubble(id, bubble, container){
 //Create a container for a single sound
 const item = document.createElement('div');
 item.setAttribute('id', 'bubble'+id);

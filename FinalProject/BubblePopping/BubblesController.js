@@ -7,7 +7,7 @@ export default class BubblesController {
     this.container = document.querySelector(container);
     // this is how our controller will know about the model and view...
     //we add them right into the class as members.
-    this.bubblesModel = new BubblesModel(10);
+    this.bubblesModel = new BubblesModel(this.container, 10);
     this.bubbleList = this.bubblesModel.getBubbleList();
     this.bubbleView = new BubblesView(this.bubbleList, this.container);
   }

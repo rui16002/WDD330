@@ -4,21 +4,15 @@ export default class ShapeMatchingModel {
   }
 
 controlDraggables(){
+
+function onDrop(dropped) {
+    gsap.fromTo(dropped, {opacity:1}, {duration: 0.1, opacity:0, repeat:3, yoyo:true});
+  }
+
   var draggableList = document.getElementsByClassName("draggable");
   var staticList = document.getElementsByClassName("static");
 
-  var container = document.querySelector('svg');
-
-//the update() function is what creates the Draggable according to the options selected (snapping).
   Draggable.create(".draggable", {
-    bounds: container,
-    edgeResistance: 0.65,
-    inertia: true,
-    autoScroll: true,
-  });
-
-
-/*  Draggable.create(".draggable", {
     bounds:"svg",
     inertia: true,
     onDrag: function() {
@@ -54,6 +48,6 @@ controlDraggables(){
 	  }
     }
   }
-  });*/
+  });
   }
 }
