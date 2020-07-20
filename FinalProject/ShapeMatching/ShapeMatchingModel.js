@@ -22,7 +22,7 @@ function onDrop(dropped) {
 	      var currDrop = staticList[i];
 	      var staticShapeType = currDrop.id.split("_")[0];
 	      var selectedShapeType = this.target.id.split("_")[0];
-          if (this.hitTest(currDrop, "90%")) {
+          if (this.hitTest(currDrop, "75%")) {
   
     	  if (staticShapeType.match(selectedShapeType)==staticShapeType)
 			  currDrop.classList.add("svgHover");
@@ -38,7 +38,7 @@ function onDrop(dropped) {
 	      var currDrop = staticList[i];
 	      var staticShapeType = currDrop.id.split("_")[0];
 	      var selectedShapeType = this.target.id.split("_")[0];
-          if (this.hitTest(currDrop, "90%")) {
+          if (this.hitTest(currDrop, "75%")) {
     	  if (staticShapeType.match(selectedShapeType)==staticShapeType)
     	  {
 			  this.target.classList.add("hide");
