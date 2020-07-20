@@ -14,11 +14,12 @@ export default class BubbleModel {
     return this.bubbles;
   }
   blow(bubbleId){
-    const bubbleSize = window.innerWidth * 0.1;
-  	const marginLeft = window.innerWidth - this.container.clientWidth;
-  	const marginRight = window.innerWidth - bubbleSize;
+    const windowWidth = window.innerWidth * 0.8;
+    const bubbleSize = windowWidth * 0.1;
+  	const marginLeft = (windowWidth - this.container.clientWidth) + (windowWidth*0.1);
+  	const marginRight = (windowWidth - bubbleSize) + (windowWidth*0.1);
   	const left = generateRandom(marginLeft, marginRight);
-  	const blowSpeed = generateRandom(1,5);
+  	const blowSpeed = generateRandom(1,4);
 	this.bubbles.push({pos:{x:left, y:generateRandom(0,10)}, interval:null, speed: blowSpeed});
   }
 }

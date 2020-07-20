@@ -1,6 +1,14 @@
 html {
 background: black;
 }
+/*The next two in order to remove the ability to scroll because it messes up with the shape matching game*/
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+}
 
 #appContainer {
   font-family: sans-serif;
@@ -9,6 +17,8 @@ background: black;
 	display: flex;
   border-radius: 1rem;
   box-shadow: 0 0 2rem #ffffff;
+  width: 80%;
+  margin: auto;
 }
 
 #menuContainer {
@@ -147,7 +157,7 @@ Styles for Shape Matching game
 }
 
 svg {
- margin: 6% 3%;
+ margin: 2% 3%;
 }
 
 .svgHover{

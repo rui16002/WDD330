@@ -27,7 +27,7 @@ class BubblesView {
 animate(){
     const container = this.container;
     this.bubbles.forEach((currBubble, index) => {
-      currBubble.interval = setInterval(frame, 25);   
+      currBubble.interval = setInterval(frame, 30);   
       function frame(){
         const bubble = document.querySelector("#bubble"+index);
         //If the buble has been popped
