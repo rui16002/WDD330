@@ -48,6 +48,11 @@ item.appendChild(sound);
 
 //add the event listener, change click for touchend
 item.addEventListener('click',function(audioItem){
+  //Say what animal it is
+  var msg = new SpeechSynthesisUtterance();
+  msg.text = this.querySelector("img").alt;
+  window.speechSynthesis.speak(msg);
+  //Play the animal sound
   const audio = this.querySelector("audio");
   audio.currentTime = 0;  
   audio.play();

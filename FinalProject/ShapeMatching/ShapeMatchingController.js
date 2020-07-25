@@ -7,8 +7,8 @@ export default class ShapeMatchingController {
     this.container = document.querySelector(container);
     // this is how our controller will know about the model and view...
     //we add them right into the class as members.
-    this.shapeMatchingModel = new ShapeMatchingModel();
     this.shapeMatchingView = new ShapeMatchingView(this.container);
+    this.shapeMatchingModel = new ShapeMatchingModel();
   }
 
   renderMiniGame(){

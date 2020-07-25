@@ -159,10 +159,6 @@ svg {
 }
 
 .draggable{
-  touch-action: none;
-  cursor: grab;
-  user-select: none;
-  z-index: 1000;
 }
 
 .svgHover{
